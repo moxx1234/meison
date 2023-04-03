@@ -1,0 +1,95 @@
+// ================================ Шрифты ================================
+// &subset=cyrillic-ext
+@import "fonts";
+
+// ================================ Иконочные шрифты ================================
+@import "icons";
+
+// ================================ Обнуление шрифтов ================================
+@import "nullstyle";
+
+// ================================ Общие стили ================================
+body {
+  overflow: auto;
+  font-family: "SFProDisplay";
+  &.active {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  @media (min-width: 26.5em) {
+    min-height: fit-content;
+  }
+}
+.page {
+  flex: 1 0 auto;
+}
+section {
+  margin: 0 0 60px;
+  @media (min-width: 56.25em) {
+    margin: 0 0 200px;
+  }
+}
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  @media (min-width: 26.625em) {
+    padding: 0 20px;
+  }
+  @media (min-width: 56.25em) {
+    max-width: 77.5rem;
+  }
+  @media (min-width: 90em) {
+    max-width: 75%;
+  }
+}
+.title {
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: #5983c1;
+  @media (min-width: 56.25em) {
+    font-size: 2.5625rem;
+  }
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 140%;
+  color: #000;
+}
+
+img {
+  transition: 1s;
+  opacity: 0;
+  &.appeared {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+h2 {
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: 0.5s;
+  &.appeared {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// ================================ Header ================================
+@import "header";
+
+// ================================ Footer ================================
+@import "footer";
+
+// ================================ Страница №1 ================================
+@import "main";
+
+// ================================ Страница №2 ================================
+
+// ================================ Страница №3 ================================

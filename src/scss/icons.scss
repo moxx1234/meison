@@ -1,0 +1,94 @@
+@font-face {
+	font-family: 'iconsfont';
+	src: url('../fonts/iconsfont.woff') format("woff"), url('../fonts/iconsfont.woff2#iconsfont') format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'iconsfont' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ac:before {
+	content: "\e900";
+}
+
+.icon-big-left:before {
+	content: "\e901";
+}
+
+.icon-big-right::after {
+	content: "\e902";
+}
+
+.icon-check::after {
+	content: "\e903";
+}
+
+.icon-facebook:before {
+	content: "\e904";
+}
+
+.icon-fire:before {
+	content: "\e905";
+}
+
+.icon-instagram:before {
+	content: "\e906";
+}
+
+.icon-left:before {
+	content: "\e907";
+}
+
+.icon-lifts:before {
+	content: "\e908";
+}
+
+.icon-parking:before {
+	content: "\e909";
+}
+
+.icon-phone:before {
+	content: "\e90a";
+}
+
+.icon-right::after {
+	content: "\e90b";
+}
+
+.icon-security:before {
+	content: "\e90c";
+}
+
+.icon-service:before {
+	content: "\e90d";
+}
+
+.icon-territory:before {
+	content: "\e90e";
+}
+
+.icon-ventilation:before {
+	content: "\e90f";
+}
+
+.icon-whatsApp:before {
+	content: "\e910";
+}
+
+.icon-windows:before {
+	content: "\e911";
+}

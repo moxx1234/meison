@@ -1,0 +1,247 @@
+.header {
+	background-color: #FFFFFF;
+	padding: 10px 0;
+	position: relative;
+	z-index: 100;
+	transform: translateY(-100%);
+	transition: all 0.5s linear;
+	&.appeared {
+		transform: translateY(0%);
+	}
+	@media (min-width: 26.625em) {
+		padding: 15px 0;
+	}
+	@media (min-width: 56.25em) {
+		background-color: rgba(255, 255, 255, 0);
+		padding: 24px 0;
+		font-size: 1rem;
+	}
+	@media (min-width: 90em) {
+		font-size: 1.125rem;
+	}
+
+	a {
+		color: #000;
+		@media (min-width: 56.25em) {
+			color: #fff;
+		}
+	}
+
+	// .header__burger
+	&__burger {
+		position: fixed;
+		width: 30px;
+		height: 26px;
+		left: 10px;
+		top: 6px;
+		z-index: 6;
+		border-radius: 50%;
+		padding: 5px;
+		@media (min-width: 26.625em) {
+			left: 15px;
+			top: 11px;
+		}
+		span {
+			background-color: #000000;
+			height: 2px;
+			width: 20px;
+			position: absolute;
+			opacity: 1;
+			transition: all 0.15s ease;
+			position: absolute;
+			left: 5px;
+			top: 12px;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			background-color: #000000;
+			height: 2px;
+			width: 20px;
+			transition: all 0.3s ease;
+			position: absolute;
+			left: 5px;
+		}
+
+		&::before {
+			top: 5px;
+		}
+
+		&::after {
+			bottom: 5px;
+		}
+
+		&.active {
+			span {
+				opacity: 0;
+			}
+			&::before {
+				transform: rotate(225deg);
+				top: 12px;
+			}
+			&::after {
+				transform: rotate(-225deg);
+				bottom: 12px;
+			}
+		}
+
+		@media (min-width: 56.25em) {
+			display: none;
+		}
+	}
+
+	// .header__container
+	&__container {
+		@media (min-width: 56.25em) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	// .header__menu
+	&__menu {
+		@media (min-width: 56.25em) {
+			height: fit-content;
+			flex: 1 1 auto;
+		}
+	}
+
+	// .header__call
+	&__call {
+		text-align: right;
+		@media (min-width: 56.25em) {
+			text-align: left;
+			display: flex;
+		}
+	}
+
+	// .header__phone
+	&__phone {
+		position: relative;
+		display: flex;
+		align-items: center;
+		max-width: fit-content;
+		margin-left: auto;
+		z-index: 3;
+		p {
+			&:first-child {
+				margin: 0 7px 0 0;
+				@media (min-width: 90em) {
+					display: none;
+				}
+			}
+			&:last-child {
+
+			}
+		}
+		@media (min-width: 56.25em) {
+			margin: 0 25px 0 0;
+			&::after {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 0%;
+				background-color: #fff;
+				bottom: 15px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				text-align: center;
+				transition: all 0.2s ease;
+			}
+			&:hover {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	// .header__call-btn
+	&__call-btn {
+		display: none;
+		@media (min-width: 56.25em) {
+			display: inline-block;
+			padding: 15px 35px;
+			border: 1px solid #fff;
+			text-transform: uppercase;
+			transition: all 0.3s ease;
+			&:hover {
+				background-color: rgba(194, 194, 194, 0.349);
+			}
+		}
+		@media (min-width: 90em) {
+			padding: 20px 40px;
+		}
+	}
+}
+
+.menu {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: -100%;
+	transform: translate(0, 0);
+	transition: transform 0.4s ease;
+	background-color: rgba(255, 255, 255, 0.95);
+	padding: 80px 0 0 0;
+
+	&.active {
+		transform: translate(100%, 0);
+		overflow: auto;
+	}
+	@media (min-width: 56.25em) {
+		height: fit-content;
+		width: auto;
+		position: static;
+		transform: translate(0, 0);
+		padding: 0;
+		background-color: rgba(255, 255, 255, 0);
+	}
+
+	// .menu__list
+	&__list {
+		text-align: center;
+		font-size: 1.875rem;
+		letter-spacing: 0.01em;
+		@media (min-width: 56.25em) {
+			display: flex;
+			font-size: 1.125rem;
+		}
+	}
+
+	// .menu__item
+	&__item {
+		margin: 0 0 40px;
+		position: relative;
+		&:last-child {
+			margin: 0;
+		}
+		@media (min-width: 56.25em) {
+			margin: 0 50px 0 0;
+			padding: 0 0 5px;
+			&:last-child {
+				margin: 0;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 0%;
+				background-color: #fff;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+				text-align: center;
+				transition: all 0.2s ease;
+			}
+			&:hover {
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
