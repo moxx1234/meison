@@ -13,15 +13,18 @@ const loader = new Loader({
   version: "weekly",
   ...additionalOptions,
 });
+
 const loadMask = document.querySelector(".mask");
 
-loader.load().then(() => {
+window.onload = () => {
   toggleButtons(window.innerWidth);
-
   loadMask.classList.add("hide");
   setTimeout(() => {
     loadMask.remove();
   }, 600);
+};
+
+loader.load().then(() => {
   const uluru = { lat: 55.76804071602304, lng: 37.57025917424042 };
   map = new google.maps.Map(document.getElementById("map"), {
     center: uluru,
@@ -163,9 +166,7 @@ footerContact.forEach((block) => {
 
 //swiper
 const swiper = new Swiper(".comfort__swiper", {
-  modules: [Navigation, Pagination],
   allowTouchMove: true,
-  effect: "flip",
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -179,10 +180,6 @@ const swiper = new Swiper(".comfort__swiper", {
   },
   clickable: true,
 });
-
-document
-  .querySelector("#next")
-  .addEventListener("click", swiper.navigation.nextEl);
 
 const toggleButtons = (vw) => {
   const bodyStyle = getComputedStyle(document.querySelector("body"));
