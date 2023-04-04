@@ -2,7 +2,7 @@
 
 Fully adaptive single page website for real estate company
 
-To build the project I had used pure HTML with semantic tags, SASS preprocessor, BEM mothodology, native JS, google maps api, SwiperJS library. Relative units and media queries and some JavaScript had been used to adapt the page. The project was build on GULP
+To build the project I had used pure HTML with semantic tags, SASS preprocessor, BEM mothodology, native JS, google maps api, SwiperJS library. Relative units, media queries and some JavaScript had been used to adapt the page. The project was build on GULP
 
 My first project using GULP. 
 
